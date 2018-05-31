@@ -14,7 +14,6 @@ session_start();
 	require_once("TeamSpeak3/TeamSpeak3.php");
 	$ts3_VirtualServer = TeamSpeak3::factory("serverquery://$login:$pass@$ip:$qport/?server_port=$port&blocking=0&nickname=$name");
 	$client = $ts3_VirtualServer->clientGetByUid("$uid");
-	$Client = $ts3_VirtualServer->clientGetByUid("$uid");
 	$ts3_VirtualServer->clientPoke($client, "Your Verification Code is : $verification_code ");
 	$client = $servergroups = $ts3_VirtualServer->clientGetByUid("$uid");
 ?>
